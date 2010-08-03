@@ -1,0 +1,19 @@
+<!--
+Author : Aslam Bari 
+-->
+<apex:page controller="VFTalkieSampleController">
+<apex:sectionHeader title="Contact List" subtitle="Click play button to hear full details of each record"/>
+ <apex:pageBlock title="Contact List">
+ <apex:pageBlockSection columns="1">
+     <apex:pageBlockTable value="{!contactList}" var="contact">
+         <apex:column value="{!contact.conRecord.Name}"/>
+         <apex:column value="{!contact.conRecord.Phone}"/>
+         <apex:column value="{!contact.conRecord.Email}"/>
+         <apex:column value="{!contact.conRecord.Description__c}"/>
+         <apex:column headerValue="Speak !!!">
+             <c:VFTalkie val="{!contact.speechtext}"></c:VFTalkie>
+         </apex:column>
+     </apex:pageBlockTable>
+ </apex:pageBlockSection>
+ </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,11 @@
+<!--
+Author : Aslam Bari 
+-->
+<apex:component access="global" controller="VFTalkieController">
+<apex:attribute name="val" type="String" description="Show Player with your speech text" access="global"/>
+  <object type="application/x-shockwave-flash" data="{!URLFOR($Resource.dewplayer)}" width="160" height="20" id="dewplayer" name="dewplayer">
+  <param name="wmode" value="transparent" />
+  <param name="movie" value="{!URLFOR($Resource.dewplayer)}" />
+  <param name="flashvars" value="mp3={!URL}{!val}" />
+  </object>  
+</apex:component>
