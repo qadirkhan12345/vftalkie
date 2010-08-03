@@ -1,0 +1,14 @@
+<!--
+Author : Aslam Bari 
+-->
+<apex:page controller="VFTalkieSampleController" sidebar="false" showHeader="false">
+  <apex:sectionHeader title="Account Details" subtitle="{!accRecord.Name}"/>
+  <apex:pageBlock title="Account Details">
+      <apex:pageblockSection columns="2">
+          <apex:outputField value="{!accRecord.Name}"/>
+          <c:VFTalkie val="{!accRecord.Name}" />
+          <apex:outputField value="{!accRecord.Description}"/>
+          <c:VFTalkie val="{!accRecord.Description}" />
+      </apex:pageblockSection>
+  </apex:pageBlock>
+</apex:page>
