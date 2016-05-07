@@ -1,0 +1,1 @@
+The project gives the ability to Visual Force page to Speak you text. It includes a small component which use to play/speak the output data of your VF screen.
